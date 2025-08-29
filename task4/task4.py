@@ -1,7 +1,7 @@
 import sys
 
 
-def min_moves_to_single_number(nums: list[int]):
+def min_moves_to_single_number(nums: list[int]) -> int:
     if not nums:
         return 0
 
@@ -25,7 +25,6 @@ def main():
     if len(sys.argv) < 2:
         print("Wrong number of parameters. Usage: python task4.py <path/to/file>")
         sys.exit(1)
-
     filename = sys.argv[1]
 
     try:
@@ -33,7 +32,6 @@ def main():
             nums = [int(line.strip()) for line in file if line.strip()]
 
         moves = min_moves_to_single_number(nums)
-
         if moves <= 20:
             print(moves)
         else:
